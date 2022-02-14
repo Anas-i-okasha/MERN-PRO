@@ -1,10 +1,8 @@
 const express = require("express");
-const mainRouter = express.Router()
-const {getAll} = require('../controller/controller')
+const mainRouter = express.Router();
+const { getAll, addNewPost } = require("../controller/controller");
 
-mainRouter.get('/',getAll);
-    // res.json(getAll())
-    // console.log("Anas okasha"
+mainRouter.get("/", getAll);
+mainRouter.post("/post", addNewPost);
 
-
-module.exports=mainRouter
+module.exports = mainRouter;

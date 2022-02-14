@@ -1,12 +1,12 @@
 const mongoose = require("mongoose")
-const db = mongoose.Connection
+// const db = mongoose.Connection
 const options = {
     useNewUrlParser: true,
     // useCreateIndex: true,
     useUnifiedTopology: true,
   };
 //   console.log(process.env.DB_URL)
-   mongoose.connect(process.env.DB_URI, options).then(
+   mongoose.connect(process.env.DB_URL, options).then(
     () => {
       console.log("DB Ready To Use");
     },
